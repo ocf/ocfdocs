@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>ShortURL Table - My Docs</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">My Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">Welcome to MkDocs</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Njha archives things</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../OCF%20staff%20training%21/" class="dropdown-item">OCF staff training!</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">ShortURL Table</a>
+</li>
+                                    
+<li>
+    <a href="../Test/" class="dropdown-item">Test</a>
+</li>
+                                    
+<li>
+    <a href="../Volunteer%20Staff%20Hours/" class="dropdown-item">Volunteer Staff Hours</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">OCF staff training!</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../OCF%20staff%20training%21/Github%20Pull%20Requests/" class="dropdown-item">Github Pull Requests</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../OCF%20staff%20training%21/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../Test/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#shorturl-table" class="nav-link">ShortURL Table</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#ocfio-short-link-translations" class="nav-link">ocf.io Short Link Translations</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="shorturl-table">ShortURL Table</h1>
+<p>Should this page exist? I think we should just link to the authoritative source for this (it's in /etc right on github?) - njha</p>
+<p>jaysa: I only found it <a href="https://github.com/ocf/puppet/blob/master/modules/ocf_www/manifests/site/shorturl.pp">here</a> in puppet… I wanted this to be a replacement for <a href="https://ocf.io/shorturls">ocf.io/shorturls</a></p>
+<p>njha: the goal of ocf.io shorturls is long-term permanent redirects -- it should not have any temporary google forms or anything like that. we have ocf.io/s/* for the short-term URLs. if you add a URL here it needs to also be disallowed as a username</p>
+<h1 id="ocfio-short-link-translations">ocf.io Short Link Translations</h1>
+<table>
+<thead>
+<tr>
+<th><strong>Short (ocf.io)</strong></th>
+<th><strong>Long</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>/</td>
+<td><a href="https://www.ocf.berkeley.edu/">https://www.ocf.berkeley.edu/</a></td>
+</tr>
+<tr>
+<td>/about</td>
+<td><a href="https://www.ocf.berkeley.edu/docs/about/">https://www.ocf.berkeley.edu/docs/about/</a></td>
+</tr>
+<tr>
+<td>/absa</td>
+<td><a href="https://drive.google.com/drive/folders/0B7n5VUVfGPUoV0xPREIwY0hzc0E?usp=sharing">https://drive.google.com/drive/folders/0B7n5VUVfGPUoV0xPREIwY0hzc0E?usp=sharing</a></td>
+</tr>
+<tr>
+<td>/account</td>
+<td><a href="https://www.ocf.berkeley.edu/docs/services/account/">https://www.ocf.berkeley.edu/docs/services/account/</a></td>
+</tr>
+<tr>
+<td>/accessibility</td>
+<td><a href="https://docs.google.com/document/d/15_ZFfYG6yv0YNmPPKfbaCK4kPQpRnkCTfx7L9t3LiLE/edit#heading=h.y7iaxq6cdj4b">https://docs.google.com/document/d/15_ZFfYG6yv0YNmPPKfbaCK4kPQpRnkCTfx7L9t3LiLE/edit#heading=h.y7iaxq6cdj4b</a></td>
+</tr>
+<tr>
+<td>/apphost</td>
+<td><a href="https://www.ocf.berkeley.edu/docs/services/webapps/">https://www.ocf.berkeley.edu/docs/services/webapps/</a></td>
+</tr>
+<tr>
+<td>/announce</td>
+<td><a href="https://groups.google.com/a/lists.berkeley.edu/forum/#!forum/ocf/join">https://groups.google.com/a/lists.berkeley.edu/forum/#!forum/ocf/join</a></td>
+</tr>
+<tr>
+<td>/apply</td>
+<td><a href="https://forms.gle/ACnWLyaEpqgV1rP29">https://forms.gle/ACnWLyaEpqgV1rP29</a></td>
+</tr>
+<tr>
+<td>/apparel</td>
+<td><a href="https://docs.google.com/forms/d/e/1FAIpQLSdJJeyRjkJhGVcH9frHtE6dtXHbgfD-fy9J5d2wRkzqSl5nPw/viewform">https://docs.google.com/forms/d/e/1FAIpQLSdJJeyRjkJhGVcH9frHtE6dtXHbgfD-fy9J5d2wRkzqSl5nPw/viewform</a></td>
+</tr>
+<tr>
+<td>/banquet</td>
+<td><a href="https://forms.gle/z2d8H8K4VoJEq1hw5">https://forms.gle/z2d8H8K4VoJEq1hw5</a></td>
+</tr>
+<tr>
+<td>/bjb</td>
+<td><a href="https://jukebox.ocf.berkeley.edu/">https://jukebox.ocf.berkeley.edu/</a></td>
+</tr>
+<tr>
+<td>/bod/*</td>
+<td><a href="https://www.ocf.berkeley.edu/\~staff/bod">https://www.ocf.berkeley.edu/\~staff/bod*</a></td>
+</tr>
+<tr>
+<td>/buy</td>
+<td><a href="https://goo.gl/forms/PnlB5dJawGZcUS0S2">https://goo.gl/forms/PnlB5dJawGZcUS0S2</a></td>
+</tr>
+<tr>
+<td>/buysheet</td>
+<td><a href="https://docs.google.com/spreadsheets/d/16tMZGSrr3D6ao8V-cIyeE5PTEYf1XQEQ9rALGAjoWls/edit?usp=sharing">https://docs.google.com/spreadsheets/d/16tMZGSrr3D6ao8V-cIyeE5PTEYf1XQEQ9rALGAjoWls/edit?usp=sharing</a></td>
+</tr>
+<tr>
+<td>/callinkapi*</td>
+<td><a href="https://studentgroupservice.sait-west.berkeley.edu/service.asmx">https://studentgroupservice.sait-west.berkeley.edu/service.asmx*</a></td>
+</tr>
+<tr>
+<td>/cockroachdb</td>
+<td><a href="https://cockroachlabs.zoom.us/j/95104416835">https://cockroachlabs.zoom.us/j/95104416835</a></td>
+</tr>
+<tr>
+<td>/cockroachdb-rsvp</td>
+<td><a href="https://docs.google.com/forms/d/e/1FAIpQLSduHSz5Q66gWH7a2vfBM3rpDqbabrGtxWCuaQNR_C4Q8_J6Cw/viewform?usp=sf_link">https://docs.google.com/forms/d/e/1FAIpQLSduHSz5Q66gWH7a2vfBM3rpDqbabrGtxWCuaQNR_C4Q8_J6Cw/viewform?usp=sf_link</a></td>
+</tr>
+<tr>
+<td>/contact</td>
+<td><a href="https://www.ocf.berkeley.edu/docs/contact/">https://www.ocf.berkeley.edu/docs/contact/</a></td>
+</tr>
+<tr>
+<td>/coffeechats</td>
+<td><a href="https://docs.google.com/spreadsheets/d/1_xACT5YKjBi1W-mZjKo6YdkfTQinzcPG5iOXrWgs72E/edit">https://docs.google.com/spreadsheets/d/1_xACT5YKjBi1W-mZjKo6YdkfTQinzcPG5iOXrWgs72E/edit</a></td>
+</tr>
+<tr>
+<td>/committee</td>
+<td><a href="https://docs.google.com/spreadsheets/d/17vjngK4aMUDdLtRGaGNap3fmTwxbP3D3QJKrwZz7uk4/edit#gid=0">https://docs.google.com/spreadsheets/d/17vjngK4aMUDdLtRGaGNap3fmTwxbP3D3QJKrwZz7uk4/edit#gid=0</a></td>
+</tr>
+<tr>
+<td>/d</td>
+<td><a href="https://discourse.ocf.berkeley.edu/">https://discourse.ocf.berkeley.edu/</a></td>
+</tr>
+<tr>
+<td>/d/[0-9]*</td>
+<td><a href="https://discourse.ocf.berkeley.edu/t/">https://discourse.ocf.berkeley.edu/t/*</a></td>
+</tr>
+<tr>
+<td>/decal/*</td>
+<td><a href="https://decal.ocf.berkeley.edu">https://decal.ocf.berkeley.edu*</a></td>
+</tr>
+<tr>
+<td>/decalinfo</td>
+<td><a href="https://docs.google.com/presentation/d/16MkYo0svCWT9O2BrWAD1Ny8vtH4OKxjKwKGq2gGaqQc/">https://docs.google.com/presentation/d/16MkYo0svCWT9O2BrWAD1Ny8vtH4OKxjKwKGq2gGaqQc/</a></td>
+</tr>
+<tr>
+<td>/decalzoom</td>
+<td><a href="https://berkeley.zoom.us/j/94285257750?pwd=OGx1TUlKWmNrQnNwdkxwRTlSL2VTUT09">https://berkeley.zoom.us/j/94285257750?pwd=OGx1TUlKWmNrQnNwdkxwRTlSL2VTUT09</a></td>
+</tr>
+<tr>
+<td>/desktopstats</td>
+<td><a href="https://grafana.ocf.berkeley.edu/d/-VCUTE8Zk/desktops?orgId=1&amp;refresh=10s">https://grafana.ocf.berkeley.edu/d/-VCUTE8Zk/desktops?orgId=1&amp;refresh=10s</a></td>
+</tr>
+<tr>
+<td>/discord</td>
+<td><a href="https://discord.gg/mwhu5eh">https://discord.gg/mwhu5eh</a></td>
+</tr>
+<tr>
+<td>/docs/*</td>
+<td><a href="https://www.ocf.berkeley.edu/docs">https://www.ocf.berkeley.edu/docs*</a></td>
+</tr>
+<tr>
+<td>/donate</td>
+<td><a href="https://give.berkeley.edu/egiving/index.cfm?fund=FU1450000&amp;org=Open+Computing+Facility&amp;amt=&amp;fundlist=FU1450000">https://give.berkeley.edu/egiving/index.cfm?fund=FU1450000&amp;org=Open+Computing+Facility&amp;amt=&amp;fundlist=FU1450000</a></td>
+</tr>
+<tr>
+<td>/email-update</td>
+<td><a href="https://status.ocf.berkeley.edu/2014/06/email-discontinuation-update-forward.html">https://status.ocf.berkeley.edu/2014/06/email-discontinuation-update-forward.html</a></td>
+</tr>
+<tr>
+<td>/eligibility</td>
+<td><a href="https://www.ocf.berkeley.edu/docs/membership/eligibility/">https://www.ocf.berkeley.edu/docs/membership/eligibility/</a></td>
+</tr>
+<tr>
+<td>/families</td>
+<td><a href="https://docs.google.com/presentation/d/1y49eQj-SPIsMtIio2KFx86SF6tKcv1yB16pO6AS2uk4/edit">https://docs.google.com/presentation/d/1y49eQj-SPIsMtIio2KFx86SF6tKcv1yB16pO6AS2uk4/edit</a></td>
+</tr>
+<tr>
+<td>/faq</td>
+<td><a href="https://www.ocf.berkeley.edu/docs/faq/">https://www.ocf.berkeley.edu/docs/faq/</a></td>
+</tr>
+<tr>
+<td>/gh/*/*</td>
+<td><a href="https://ocf.io/gh//blob/master">https://ocf.io/gh/*/blob/master*</a></td>
+</tr>
+<tr>
+<td>/gh/i/*</td>
+<td><a href="https://github.com/ocf/ircbot">https://github.com/ocf/ircbot*</a></td>
+</tr>
+<tr>
+<td>/gh/l/*</td>
+<td><a href="https://github.com/ocf/ocflib">https://github.com/ocf/ocflib*</a></td>
+</tr>
+<tr>
+<td>/gh/p/*</td>
+<td><a href="https://github.com/ocf/puppet">https://github.com/ocf/puppet*</a></td>
+</tr>
+<tr>
+<td>/gh/u/*</td>
+<td><a href="https://github.com/ocf/utils">https://github.com/ocf/utils*</a></td>
+</tr>
+<tr>
+<td>/gh/w/*</td>
+<td><a href="https://github.com/ocf/ocfweb">https://github.com/ocf/ocfweb*</a></td>
+</tr>
+<tr>
+<td>/gh/*</td>
+<td><a href="https://ocf.io/github">https://ocf.io/github*</a></td>
+</tr>
+<tr>
+<td>/github/*</td>
+<td><a href="https://github.com/ocf">https://github.com/ocf*</a></td>
+</tr>
+<tr>
+<td>/gadmin</td>
+<td><a href="https://admin.google.com/a/ocf.berkeley.edu">https://admin.google.com/a/ocf.berkeley.edu</a></td>
+</tr>
+<tr>
+<td>/gcal</td>
+<td><a href="https://calendar.google.com/a/ocf.berkeley.edu">https://calendar.google.com/a/ocf.berkeley.edu</a></td>
+</tr>
+<tr>
+<td>/getinginvolved</td>
+<td><a href="https://www.ocf.berkeley.edu/docs/staff/getinvolved/">https://www.ocf.berkeley.edu/docs/staff/getinvolved/</a></td>
+</tr>
+<tr>
+<td>/gcal/ocf</td>
+<td><a href="https://calendar.google.com/calendar/embed?src=ocf.berkeley.edu_bcl2puplt6t9e9e9njme6jqca8@group.calendar.google.com&amp;ctz=America/Los_Angeles">https://calendar.google.com/calendar/embed?src=ocf.berkeley.edu_bcl2puplt6t9e9e9njme6jqca8@group.calendar.google.com&amp;ctz=America/Los_Angeles</a></td>
+</tr>
+<tr>
+<td>/gcal/officers</td>
+<td><a href="https://calendar.google.com/calendar/embed?src=ocf.berkeley.edu_3e56a1lm5gnd91vf1r7fafi7u4@group.calendar.google.com&amp;ctz=America/Los_Angeles">https://calendar.google.com/calendar/embed?src=ocf.berkeley.edu_3e56a1lm5gnd91vf1r7fafi7u4@group.calendar.google.com&amp;ctz=America/Los_Angeles</a></td>
+</tr>
+<tr>
+<td>/gettoknow</td>
+<td><a href="https://forms.gle/i3M1XXsFmwwy633h9">https://forms.gle/i3M1XXsFmwwy633h9</a></td>
+</tr>
+<tr>
+<td>/gmail</td>
+<td><a href="https://mail.google.com/a/ocf.berkeley.edu">https://mail.google.com/a/ocf.berkeley.edu</a></td>
+</tr>
+<tr>
+<td>/gdrive</td>
+<td><a href="https://drive.google.com/a/ocf.berkeley.edu">https://drive.google.com/a/ocf.berkeley.edu</a></td>
+</tr>
+<tr>
+<td>/gdrive/staff</td>
+<td><a href="https://drive.google.com/drive/folders/0AKXh7iBur_mbUk9PVA">https://drive.google.com/drive/folders/0AKXh7iBur_mbUk9PVA</a></td>
+</tr>
+<tr>
+<td>/gdrive/officers</td>
+<td><a href="https://drive.google.com/drive/folders/0APZdR8kE4NN1Uk9PVA">https://drive.google.com/drive/folders/0APZdR8kE4NN1Uk9PVA</a></td>
+</tr>
+<tr>
+<td>/guest</td>
+<td><a href="https://goo.gl/forms/ImNfnZkrRrakZcIr1">https://goo.gl/forms/ImNfnZkrRrakZcIr1</a></td>
+</tr>
+<tr>
+<td>/halloween</td>
+<td><a href="https://forms.gle/44kTL8Eo9Tr3GsH66">https://forms.gle/44kTL8Eo9Tr3GsH66</a></td>
+</tr>
+<tr>
+<td>/help/*</td>
+<td><a href="https://www.ocf.berkeley.edu/docs">https://www.ocf.berkeley.edu/docs*</a></td>
+</tr>
+<tr>
+<td>/hiring</td>
+<td><a href="https://docs.google.com/forms/d/e/1FAIpQLSfAAZIScKfF2GPEDXx4lgxZofYFpt6JlQxM-duAKpl-1FAYww/viewform">https://docs.google.com/forms/d/e/1FAIpQLSfAAZIScKfF2GPEDXx4lgxZofYFpt6JlQxM-duAKpl-1FAYww/viewform</a></td>
+</tr>
+<tr>
+<td>/hiringinterest</td>
+<td><a href="https://docs.google.com/forms/d/e/1FAIpQLSfuu2EN28bPksyA8h_BjRsHQvnzE8gk7gC5ySEAp50GExhUgg/viewform">https://docs.google.com/forms/d/e/1FAIpQLSfuu2EN28bPksyA8h_BjRsHQvnzE8gk7gC5ySEAp50GExhUgg/viewform</a></td>
+</tr>
+<tr>
+<td>/hosting</td>
+<td><a href="https://www.ocf.berkeley.edu/docs/services/web/">https://www.ocf.berkeley.edu/docs/services/web/</a></td>
+</tr>
+<tr>
+<td>/hours</td>
+<td><a href="https://ocf.io/lab#hours">https://ocf.io/lab#hours</a></td>
+</tr>
+<tr>
+<td>/hpc</td>
+<td><a href="https://www.ocf.berkeley.edu/docs/services/hpc/">https://www.ocf.berkeley.edu/docs/services/hpc/</a></td>
+</tr>
+<tr>
+<td>/hpcstats</td>
+<td><a href="https://grafana.ocf.berkeley.edu/d/N7Sb3nwik/hpc-slurm-dashboard?orgId=1&amp;refresh=30s">https://grafana.ocf.berkeley.edu/d/N7Sb3nwik/hpc-slurm-dashboard?orgId=1&amp;refresh=30s</a></td>
+</tr>
+<tr>
+<td>/https</td>
+<td><a href="https://status.ocf.berkeley.edu/2014/10/moving-wwwocfberkeleyedu-to-https-only.html">https://status.ocf.berkeley.edu/2014/10/moving-wwwocfberkeleyedu-to-https-only.html</a></td>
+</tr>
+<tr>
+<td>/infra</td>
+<td><a href="https://docs.google.com/presentation/d/1RGyytdpdJycxhgCriwB575fCRVJLtErEdkrJrquRXD8/edit?usp=sharing">https://docs.google.com/presentation/d/1RGyytdpdJycxhgCriwB575fCRVJLtErEdkrJrquRXD8/edit?usp=sharing</a></td>
+</tr>
+<tr>
+<td>/infosession</td>
+<td><a href="https://docs.google.com/presentation/d/1nKb8HVykWUUei4UOSdzXCv1t351Poh7L5himavim3MI/edit?usp=sharing">https://docs.google.com/presentation/d/1nKb8HVykWUUei4UOSdzXCv1t351Poh7L5himavim3MI/edit?usp=sharing</a></td>
+</tr>
+<tr>
+<td>/internals</td>
+<td><a href="https://docs.google.com/presentation/d/1rfjCWpM0_IiHzKcxld5q4AYaoSQXeRVaj_R1YAOPl8A/edit">https://docs.google.com/presentation/d/1rfjCWpM0_IiHzKcxld5q4AYaoSQXeRVaj_R1YAOPl8A/edit</a></td>
+</tr>
+<tr>
+<td>/irc</td>
+<td><a href="https://www.ocf.berkeley.edu/docs/contact/irc/">https://www.ocf.berkeley.edu/docs/contact/irc/</a></td>
+</tr>
+<tr>
+<td>/job</td>
+<td><a href="https://docs.google.com/document/d/1oS3ma415LbtuyeEuuoucWKYLcWOJaWmzhv2nIs5f718/edit">https://docs.google.com/document/d/1oS3ma415LbtuyeEuuoucWKYLcWOJaWmzhv2nIs5f718/edit</a></td>
+</tr>
+<tr>
+<td>/join</td>
+<td><a href="https://www.ocf.berkeley.edu/account/register/">https://www.ocf.berkeley.edu/account/register/</a></td>
+</tr>
+<tr>
+<td>/joinstaff</td>
+<td><a href="https://docs.google.com/presentation/d/1HNSWfHlPf_gwlOo7TJQcRwttGYUlo567h1u9qDxi48c/edit?usp=sharing">https://docs.google.com/presentation/d/1HNSWfHlPf_gwlOo7TJQcRwttGYUlo567h1u9qDxi48c/edit?usp=sharing</a></td>
+</tr>
+<tr>
+<td>/k</td>
+<td><a href="https://kanboard.ocf.berkeley.edu/">https://kanboard.ocf.berkeley.edu/</a></td>
+</tr>
+<tr>
+<td>/k/a</td>
+<td><a href="https://kanboard.ocf.berkeley.edu/?controller=BoardViewController&amp;action=show&amp;project_id=2">https://kanboard.ocf.berkeley.edu/?controller=BoardViewController&amp;action=show&amp;project_id=2</a></td>
+</tr>
+<tr>
+<td>/k/[0-9]*</td>
+<td><a href="https://kanboard.ocf.berkeley.edu/?controller=TaskViewController&amp;action=show&amp;task_id=">https://kanboard.ocf.berkeley.edu/?controller=TaskViewController&amp;action=show&amp;task_id=*</a></td>
+</tr>
+<tr>
+<td>/register</td>
+<td><a href="https://www.ocf.berkeley.edu/account/register/">https://www.ocf.berkeley.edu/account/register/</a></td>
+</tr>
+<tr>
+<td>/reserve</td>
+<td><a href="https://www.ocf.berkeley.edu/docs/services/lab/lab-reservation-policy/">https://www.ocf.berkeley.edu/docs/services/lab/lab-reservation-policy/</a></td>
+</tr>
+<tr>
+<td>/lab</td>
+<td><a href="https://www.ocf.berkeley.edu/docs/services/lab/">https://www.ocf.berkeley.edu/docs/services/lab/</a></td>
+</tr>
+<tr>
+<td>/labmap/*</td>
+<td><a href="https://labmap.ocf.berkeley.edu">https://labmap.ocf.berkeley.edu*</a></td>
+</tr>
+<tr>
+<td>/mail</td>
+<td><a href="https://www.ocf.berkeley.edu/docs/services/vhost/mail/">https://www.ocf.berkeley.edu/docs/services/vhost/mail/</a></td>
+</tr>
+<tr>
+<td>/mailrequest</td>
+<td><a href="https://www.ocf.berkeley.edu/account/vhost/mail/">https://www.ocf.berkeley.edu/account/vhost/mail/</a></td>
+</tr>
+<tr>
+<td>/mastodon</td>
+<td><a href="https://mastodon.ocf.berkeley.edu">https://mastodon.ocf.berkeley.edu</a></td>
+</tr>
+<tr>
+<td>/matrix</td>
+<td><a href="https://chat.ocf.berkeley.edu">https://chat.ocf.berkeley.edu</a></td>
+</tr>
+<tr>
+<td>/meet</td>
+<td><a href="https://meet.google.com/cqz-kjwj-hbx">https://meet.google.com/cqz-kjwj-hbx</a></td>
+</tr>
+<tr>
+<td>/membership</td>
+<td><a href="https://www.ocf.berkeley.edu/docs/membership/">https://www.ocf.berkeley.edu/docs/membership/</a></td>
+</tr>
+<tr>
+<td>/minutes/*</td>
+<td><a href="https://www.ocf.berkeley.edu/\~staff/bod">https://www.ocf.berkeley.edu/\~staff/bod*</a></td>
+</tr>
+<tr>
+<td>/mirrorstats</td>
+<td><a href="https://grafana.ocf.berkeley.edu/d/Jo_bRsyiz/mirrors?orgId=1">https://grafana.ocf.berkeley.edu/d/Jo_bRsyiz/mirrors?orgId=1</a></td>
+</tr>
+<tr>
+<td>/mlk</td>
+<td><a href="https://www.ocf.berkeley.edu/mlk">https://www.ocf.berkeley.edu/mlk</a></td>
+</tr>
+<tr>
+<td>/mysql</td>
+<td><a href="https://www.ocf.berkeley.edu/docs/services/mysql/">https://www.ocf.berkeley.edu/docs/services/mysql/</a></td>
+</tr>
+<tr>
+<td>/newstaff</td>
+<td><a href="https://forms.gle/guESY2ykNkshNxsf8">https://forms.gle/guESY2ykNkshNxsf8</a></td>
+</tr>
+<tr>
+<td>/notes</td>
+<td><a href="https://notes.ocf.berkeley.edu/">https://notes.ocf.berkeley.edu/</a></td>
+</tr>
+<tr>
+<td>/now</td>
+<td><a href="https://www.ocf.berkeley.edu/tv">https://www.ocf.berkeley.edu/tv*</a></td>
+</tr>
+<tr>
+<td>/officers</td>
+<td><a href="https://www.ocf.berkeley.edu/docs/about/officers/">https://www.ocf.berkeley.edu/docs/about/officers/</a></td>
+</tr>
+<tr>
+<td>/onboarding</td>
+<td><a href="https://forms.gle/KKgp6fLhGkrfTKea8">https://forms.gle/KKgp6fLhGkrfTKea8</a></td>
+</tr>
+<tr>
+<td>/opstaff-schedule</td>
+<td><a href="https://docs.google.com/spreadsheets/d/18EBPiC0HtW_ij_3MH5y3FyFVaG4ElnYHxJduQQ3IZM8/edit?usp=sharing">https://docs.google.com/spreadsheets/d/18EBPiC0HtW_ij_3MH5y3FyFVaG4ElnYHxJduQQ3IZM8/edit?usp=sharing</a></td>
+</tr>
+<tr>
+<td>/os</td>
+<td><a href="https://docs.google.com/spreadsheets/d/1V4qYWOjQiafE_Xr-4X4nCUI1Sux5yJQNqHgzLV8j76I/edit">https://docs.google.com/spreadsheets/d/1V4qYWOjQiafE_Xr-4X4nCUI1Sux5yJQNqHgzLV8j76I/edit</a></td>
+</tr>
+<tr>
+<td>/password</td>
+<td><a href="https://www.ocf.berkeley.edu/account/password">https://www.ocf.berkeley.edu/account/password</a></td>
+</tr>
+<tr>
+<td>/printerlog</td>
+<td><a href="https://docs.google.com/spreadsheets/d/1f4rLSmVt11oeFmO1yUUcXa-JcyFmDtloTWrYYPfYJoU/edit?usp=sharing">https://docs.google.com/spreadsheets/d/1f4rLSmVt11oeFmO1yUUcXa-JcyFmDtloTWrYYPfYJoU/edit?usp=sharing</a></td>
+</tr>
+<tr>
+<td>/printers</td>
+<td><a href="https://grafana.ocf.berkeley.edu/d/SKl6_71iz">https://grafana.ocf.berkeley.edu/d/SKl6_71iz</a></td>
+</tr>
+<tr>
+<td>/printerstats</td>
+<td><a href="https://grafana.ocf.berkeley.edu/d/SKl6_71iz">https://grafana.ocf.berkeley.edu/d/SKl6_71iz</a></td>
+</tr>
+<tr>
+<td>/printing</td>
+<td><a href="https://www.ocf.berkeley.edu/announcements/2016-02-09/printing">https://www.ocf.berkeley.edu/announcements/2016-02-09/printing</a></td>
+</tr>
+<tr>
+<td>/projects</td>
+<td><a href="https://github.com/ocf/projects/issues">https://github.com/ocf/projects/issues</a></td>
+</tr>
+<tr>
+<td>/referendum-cost-breakdown</td>
+<td><a href="https://docs.google.com/spreadsheets/d/1vIwrHlYtn1IcFH-1pTbUw2JvKNsR4rwlUzCJUbapID8/edit?usp=sharing">https://docs.google.com/spreadsheets/d/1vIwrHlYtn1IcFH-1pTbUw2JvKNsR4rwlUzCJUbapID8/edit?usp=sharing</a></td>
+</tr>
+<tr>
+<td>/register2vote</td>
+<td><a href="https://www.vote.org/register-to-vote/">https://www.vote.org/register-to-vote/</a></td>
+</tr>
+<tr>
+<td>/rt/</td>
+<td><a href="https://rt.ocf.berkeley.edu/">https://rt.ocf.berkeley.edu/</a></td>
+</tr>
+<tr>
+<td>/rt/[0-9]*</td>
+<td><a href="https://rt.ocf.berkeley.edu/Ticket/Display.html?id=">https://rt.ocf.berkeley.edu/Ticket/Display.html?id=*</a></td>
+</tr>
+<tr>
+<td>/rt/[a-z]*</td>
+<td><a href="https://rt.ocf.berkeley.edu/Search/Results.html?Query=Queue =" title="' AND Status = '__Active__">https://rt.ocf.berkeley.edu/Search/Results.html?Query=Queue = '*' AND Status = '<strong>Active</strong>'</a></td>
+</tr>
+<tr>
+<td>/sdocs/*</td>
+<td><a href="https://www.ocf.berkeley.edu/docs/staff">https://www.ocf.berkeley.edu/docs/staff*</a></td>
+</tr>
+<tr>
+<td>/senate-resolution</td>
+<td><a href="https://docs.google.com/document/d/1UwjX4BJIzeQ6XjGBHu2rA51XUjywTBtPTzJN2CMGU4o/edit">https://docs.google.com/document/d/1UwjX4BJIzeQ6XjGBHu2rA51XUjywTBtPTzJN2CMGU4o/edit</a></td>
+</tr>
+<tr>
+<td>/senate-presentation</td>
+<td><a href="https://docs.google.com/presentation/d/1LKUhzYaAydj-CgUEaHcBjrbMkYkmSnrZ9eouszodgqY/edit">https://docs.google.com/presentation/d/1LKUhzYaAydj-CgUEaHcBjrbMkYkmSnrZ9eouszodgqY/edit</a></td>
+</tr>
+<tr>
+<td>/servers</td>
+<td><a href="https://www.ocf.berkeley.edu/docs/staff/backend/servers/">https://www.ocf.berkeley.edu/docs/staff/backend/servers/</a></td>
+</tr>
+<tr>
+<td>/serverstats</td>
+<td><a href="https://grafana.ocf.berkeley.edu/d/7n0r8PUWz/servers?orgId=1&amp;refresh=10s">https://grafana.ocf.berkeley.edu/d/7n0r8PUWz/servers?orgId=1&amp;refresh=10s</a></td>
+</tr>
+<tr>
+<td>/signin</td>
+<td><a href="https://goo.gl/forms/j2NU4u3T1pMKIPpu1">https://goo.gl/forms/j2NU4u3T1pMKIPpu1</a></td>
+</tr>
+<tr>
+<td>/short-urls</td>
+<td><a href="https://www.ocf.berkeley.edu/docs/staff/tips/shorturl-tbl">https://www.ocf.berkeley.edu/docs/staff/tips/shorturl-tbl</a></td>
+</tr>
+<tr>
+<td>/short-urlspp</td>
+<td><a href="https://github.com/ocf/puppet/blob/master/modules/ocf_www/manifests/site/shorturl.pp">https://github.com/ocf/puppet/blob/master/modules/ocf_www/manifests/site/shorturl.pp</a></td>
+</tr>
+<tr>
+<td>/sh</td>
+<td><a href="https://ocf.io/staff-hours">https://ocf.io/staff-hours</a></td>
+</tr>
+<tr>
+<td>/shs</td>
+<td><a href="https://github.com/ocf/etc/blob/master/configs/staff_hours.yaml">https://github.com/ocf/etc/blob/master/configs/staff_hours.yaml</a></td>
+</tr>
+<tr>
+<td>/slack</td>
+<td><a href="https://www.ocf.berkeley.edu/docs/contact/slack/">https://www.ocf.berkeley.edu/docs/contact/slack/</a></td>
+</tr>
+<tr>
+<td>/social</td>
+<td><a href="https://docs.google.com/forms/d/e/1FAIpQLSdLUhDYQug53NXdPEeJkLzB9JNUMUWJmXMoRSv18PkhEh4h4Q/viewform">https://docs.google.com/forms/d/e/1FAIpQLSdLUhDYQug53NXdPEeJkLzB9JNUMUWJmXMoRSv18PkhEh4h4Q/viewform</a></td>
+</tr>
+<tr>
+<td>/social-rules</td>
+<td><a href="https://www.recurse.com/social-rules">https://www.recurse.com/social-rules</a></td>
+</tr>
+<tr>
+<td>/socialbingo</td>
+<td><a href="https://docs.google.com/forms/d/e/1FAIpQLSeU2iZf_SnephTu6KQ_VfeFBI-YMetTSioeibFKwgtoITlG-w/viewform">https://docs.google.com/forms/d/e/1FAIpQLSeU2iZf_SnephTu6KQ_VfeFBI-YMetTSioeibFKwgtoITlG-w/viewform</a></td>
+</tr>
+<tr>
+<td>/ssh</td>
+<td><a href="https://www.ocf.berkeley.edu/docs/services/shell/">https://www.ocf.berkeley.edu/docs/services/shell/</a></td>
+</tr>
+<tr>
+<td>/staff</td>
+<td><a href="https://www.ocf.berkeley.edu/about/staff">https://www.ocf.berkeley.edu/about/staff</a></td>
+</tr>
+<tr>
+<td>/staffhours</td>
+<td><a href="https://ocf.io/staff-hours">https://ocf.io/staff-hours</a></td>
+</tr>
+<tr>
+<td>/staff-hours</td>
+<td><a href="https://www.ocf.berkeley.edu/staff-hours">https://www.ocf.berkeley.edu/staff-hours</a></td>
+</tr>
+<tr>
+<td>/staff-hours-signup</td>
+<td><a href="https://github.com/ocf/etc/blob/master/configs/staff_hours.yaml">https://github.com/ocf/etc/blob/master/configs/staff_hours.yaml</a></td>
+</tr>
+<tr>
+<td>/staff_hours_signup</td>
+<td><a href="https://github.com/ocf/etc/blob/master/configs/staff_hours.yaml">https://github.com/ocf/etc/blob/master/configs/staff_hours.yaml</a></td>
+</tr>
+<tr>
+<td>/staff-training</td>
+<td><a href="https://decal.ocf.io/resources/">https://decal.ocf.io/resources/</a></td>
+</tr>
+<tr>
+<td>/starter-tasks</td>
+<td><a href="https://www.ocf.berkeley.edu/docs/staff/startertasks/">https://www.ocf.berkeley.edu/docs/staff/startertasks/</a></td>
+</tr>
+<tr>
+<td>/stats/*</td>
+<td><a href="https://www.ocf.berkeley.edu/stats">https://www.ocf.berkeley.edu/stats*</a></td>
+</tr>
+<tr>
+<td>/status</td>
+<td><a href="https://status.ocf.berkeley.edu/">https://status.ocf.berkeley.edu/</a></td>
+</tr>
+<tr>
+<td>/subdomains</td>
+<td><a href="https://www.ocf.berkeley.edu/announcements/2023-03-01/subdomains">https://www.ocf.berkeley.edu/announcements/2023-03-01/subdomains</a></td>
+</tr>
+<tr>
+<td>/swag</td>
+<td><a href="https://ocf.io/s/swag">https://ocf.io/s/swag</a></td>
+</tr>
+<tr>
+<td>/templates</td>
+<td><a href="https://templates.ocf.berkeley.edu/">https://templates.ocf.berkeley.edu/</a></td>
+</tr>
+<tr>
+<td>/buster</td>
+<td><a href="https://www.ocf.berkeley.edu/docs/staff/backend/buster/">https://www.ocf.berkeley.edu/docs/staff/backend/buster/</a></td>
+</tr>
+<tr>
+<td>/s/*</td>
+<td><a href="https://www.ocf.berkeley.edu/api/shorturl/">https://www.ocf.berkeley.edu/api/shorturl/*</a></td>
+</tr>
+<tr>
+<td>/stf-cost-breakdown</td>
+<td><a href="https://docs.google.com/spreadsheets/d/1U3YfU5S1hyi4c9u1vME84lz5hQPz23LKWCaD8mq4JHI/edit">https://docs.google.com/spreadsheets/d/1U3YfU5S1hyi4c9u1vME84lz5hQPz23LKWCaD8mq4JHI/edit</a></td>
+</tr>
+<tr>
+<td>/survey</td>
+<td><a href="https://goo.gl/forms/sk1s0dnuxDY71vBR2">https://goo.gl/forms/sk1s0dnuxDY71vBR2</a></td>
+</tr>
+<tr>
+<td>/today</td>
+<td><a href="https://www.ocf.berkeley.edu/tv">https://www.ocf.berkeley.edu/tv*</a></td>
+</tr>
+<tr>
+<td>/teamsus</td>
+<td><a href="https://docs.google.com/spreadsheets/d/16KIXvgsBP5VLWmX6QXHxcn147ZYRWSchXL-f3iFYsHo/edit?usp=sharing">https://docs.google.com/spreadsheets/d/16KIXvgsBP5VLWmX6QXHxcn147ZYRWSchXL-f3iFYsHo/edit?usp=sharing</a></td>
+</tr>
+<tr>
+<td>/tw/*</td>
+<td><a href="https://ocf.io/twitter">https://ocf.io/twitter*</a></td>
+</tr>
+<tr>
+<td>/twitter/*</td>
+<td><a href="https://twitter.com/ucbocf">https://twitter.com/ucbocf*</a></td>
+</tr>
+<tr>
+<td>/tv/*</td>
+<td><a href="https://www.ocf.berkeley.edu/tv">https://www.ocf.berkeley.edu/tv*</a></td>
+</tr>
+<tr>
+<td>/tv/map/*</td>
+<td><a href="https://labmap.ocf.berkeley.edu">https://labmap.ocf.berkeley.edu*</a></td>
+</tr>
+<tr>
+<td>/vhost</td>
+<td><a href="https://www.ocf.berkeley.edu/docs/services/vhost/">https://www.ocf.berkeley.edu/docs/services/vhost/</a></td>
+</tr>
+<tr>
+<td>/vhost-mail</td>
+<td><a href="https://www.ocf.berkeley.edu/docs/services/vhost/mail/">https://www.ocf.berkeley.edu/docs/services/vhost/mail/</a></td>
+</tr>
+<tr>
+<td>/wiki</td>
+<td><a href="https://www.ocf.berkeley.edu/docs/">https://www.ocf.berkeley.edu/docs/</a></td>
+</tr>
+<tr>
+<td>/wordpress</td>
+<td><a href="https://www.ocf.berkeley.edu/docs/services/web/wordpress/">https://www.ocf.berkeley.edu/docs/services/web/wordpress/</a></td>
+</tr>
+<tr>
+<td>/web</td>
+<td><a href="https://www.ocf.berkeley.edu/docs/services/web/">https://www.ocf.berkeley.edu/docs/services/web/</a></td>
+</tr>
+<tr>
+<td>/xkcd</td>
+<td><a href="https://xkcd.ocf.berkeley.edu/">https://xkcd.ocf.berkeley.edu/</a></td>
+</tr>
+<tr>
+<td>/youtube</td>
+<td><a href="https://www.youtube.com/channel/UCx6SI8vROy9UGje0IiLkk8w">https://www.youtube.com/channel/UCx6SI8vROy9UGje0IiLkk8w</a></td>
+</tr>
+<tr>
+<td>/zoom</td>
+<td><a href="https://berkeley.zoom.us/j/92953066816">https://berkeley.zoom.us/j/92953066816</a></td>
+</tr>
+<tr>
+<td>/\~[a-z0-9]*/*</td>
+<td><a href="https://www.ocf.berkeley.edu/\~">https://www.ocf.berkeley.edu/\~*</a></td>
+</tr>
+</tbody>
+</table></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

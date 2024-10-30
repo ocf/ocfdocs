@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>Github Pull Requests - My Docs</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../../css/brands.min.css" rel="stylesheet">
+        <link href="../../../css/solid.min.css" rel="stylesheet">
+        <link href="../../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">My Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../../.." class="nav-link">Welcome to MkDocs</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Njha archives things</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../" class="dropdown-item">OCF staff training!</a>
+</li>
+                                    
+<li>
+    <a href="../../ShortURL%20Table/" class="dropdown-item">ShortURL Table</a>
+</li>
+                                    
+<li>
+    <a href="../../Test/" class="dropdown-item">Test</a>
+</li>
+                                    
+<li>
+    <a href="../../Volunteer%20Staff%20Hours/" class="dropdown-item">Volunteer Staff Hours</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">OCF staff training!</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Github Pull Requests</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../../Volunteer%20Staff%20Hours/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" class="nav-link disabled">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#github-pull-requests" class="nav-link">Github Pull Requests</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#about-git-and-github" class="nav-link">About Git and GitHub</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#task-1-exploring-the-ocf-github" class="nav-link">Task 1: Exploring the OCF GitHub</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#task-2-making-pull-requests" class="nav-link">Task 2: Making Pull Requests</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#task-3-staff-hours" class="nav-link">Task 3: Staff Hours</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#what-next" class="nav-link">What next?</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="github-pull-requests">Github Pull Requests</h1>
+<h1 id="about-git-and-github">About Git and GitHub</h1>
+<p>In a highly collaborative environment like the OCF, where many staff members may be editing the same codebase at the same time, we need a way to make sure everyone's changes get integrated successfully, and that if something ever breaks, we can easily roll back to a previous version.</p>
+<p><a href="https://git-scm.com/">Git</a> is an industry-standard version control manager that allows us to do this, as well as many other things. If you stick around the OCF (or the software engineering industry in general), you will eventually get quite proficient at it just through normal usage, so don't feel like you need to learn everything about Git all at once! For this lab, we'll only go through the basics that you need to know to contribute; if you'd like to keep going at it see the <a href="https://docs.ocf.berkeley.edu/doc/github-pull-requests-WBINKyGhov/edit#h-what-next">What next?</a> section for more resources.</p>
+<p><a href="https://github.com">GitHub</a> is an online platform where Git repositories can be uploaded and shared. Nearly all of the OCF's code can be found on our GitHub organization, <a href="https://github.com/ocf">github.com/ocf</a>.</p>
+<h1 id="task-1-exploring-the-ocf-github">Task 1: Exploring the OCF GitHub</h1>
+<p>If you go to <a href="https://github.com/ocf">the OCF GitHub</a>, you may see that we have nearly 100 public repositories (or maybe more, if you're reading this in the future). That's a lot of code!</p>
+<p>Luckily, you won't need to work with most of it. Here are the most important repositories that you should take a look at:</p>
+<ul>
+<li><a href="https://github.com/ocf/puppet">puppet</a>: Configurations for our servers and desktops. If you make a change to this repository, it gets automatically installed on all affected machines.</li>
+<li><a href="https://github.com/ocf/ocfweb">ocfweb</a>: The OCF website and web services. Also currently contains the OCF documentation (we are working on moving this to a separate repository).</li>
+<li><a href="https://github.com/ocf/ocfstatic">ocfstatic</a>: The redesigned new OCF site. If you are interested in web development, you should contribute to this repository!</li>
+<li><a href="https://github.com/ocf/etc">etc</a>: OCF configuration files used by multiple repositories; includes staff hours, virtual host lists, and more.</li>
+<li><a href="https://github.com/ocf/ocflib">ocflib</a>: A Python library that allows for easy access to OCF utilities, some of which you used in previous labs.</li>
+</ul>
+<p>\</p>
+<p>For this task, you'll dig around the existing codebase to become more familiar with what might go where.</p>
+<p><strong>HINTS:</strong></p>
+<ul>
+<li>The GitHub search bar is extremely helpful. Search a term within the organization, then click on the "Code" tab to view all instances of that keyword in the codebase. Use <a href="https://github.com/search?q=org%3Aocf+your+query+here&amp;type=code">this</a> as a starting point.</li>
+<li>The requested code snippets below are all found in one of the repositories mentioned above.</li>
+</ul>
+<p><strong>a.</strong> The OCF uses a shorturl system to make accessing common links more convenient (e.g. ocf.io/join, ocf.io/discord, etc). If you wanted to add a new shorturl, which file would you edit? (There should be a file with a list of them)</p>
+<p><strong>b.</strong> Which file contains the source code for the documentation page at <a href="https://new.ocf.berkeley.edu/docs/staff/getinvolved/">https://new.ocf.berkeley.edu/docs/staff/getinvolved/</a>? (Notice that it's on new.ocf.berkeley.edu, NOT ocf.berkeley.edu).</p>
+<p><strong>c.</strong> If someone comes into the lab asking to add the virtual host name ofc.berkeley.edu, which file can you look in to see if it's already taken? (There is a list of vhosts somewhere)</p>
+<h1 id="task-2-making-pull-requests">Task 2: Making Pull Requests</h1>
+<p>Now that you've peeked around the current code, let's get some practice changing it!</p>
+<p>For the next exercise, you'll add yourself to the <a href="https://new.ocf.berkeley.edu/about/staff">staff page</a> on the new website.</p>
+<h3 id="setup">Setup</h3>
+<p>To get set up, follow these steps:</p>
+<ol>
+<li>Make sure you have a GitHub account and are logged in.</li>
+<li>Navigate to <a href="https://github.com/ocf/ocfstatic">the ocfstatic repo</a> and click the "Fork" button (see the image below). <img alt="fork" src="https://decal.ocf.berkeley.edu/labs/staff/assets/images/labs/s4/ocf-fork.png" /></li>
+<li>Select your account, and when the fork is done, you should be on</li>
+</ol>
+<p><code>javascript
+   https://github.com/YOURUSERNAME/ocfstatic</code></p>
+<p>. This is a copy of the ocfstatic code that you can edit however you wish without pushing it to the actual site.
+4. SSH into supernova (as you have done in previous labs). Run the following command, making sure to change</p>
+<p><code>javascript
+   YOURUSERNAMEHERE</code></p>
+<pre><code>to your actual GitHub username. (
+</code></pre>
+<p><code>javascript
+   git clone https://github.com/YOURUSERNAME/ocfstatic</code></p>
+<p>)
+5. In the terminal, type</p>
+<p><code>javascript
+   cd ocfstatic</code></p>
+<p>. If you now run</p>
+<p><code>javascript
+   git status</code></p>
+<pre><code>it should say something like "nothing to commit, working tree clean".
+</code></pre>
+<p>At this point, you have a local copy of the new website's code loaded onto supernova! The next step is to make a new branch, which allows you to make changes while still having a copy of the original code (on the master branch). You can do this with the command git checkout -b BRANCHNAME. A good branch name might be something like add-YOURUSERNAMEHERE (replacing with your actual username, of course).</p>
+<h3 id="editing">Editing</h3>
+<p>At last, you're ready to make a change! You will need to edit <a href="https://github.com/ocf/ocfstatic/blob/master/src/pages/About/Staff.vue">this file</a>. Try to use vim so you can get some practice with it (see <a href="https://decal.ocf.berkeley.edu/labs/b2/#a-quick-intro-to-vim">b2</a> if you need a refresher), but it's totally fine to use vscode, nano, or another editor if you are more comfortable using it. You can see the existing file contents to get a hint on how to add yourself (just make sure your ID is unique).</p>
+<h3 id="git-add-git-commit-git-push">Git add, git commit, git push</h3>
+<p>When you have made the change and saved the file, go back to the ocfstatic directory and type git add .. Now, when you type git status, it should tell you about the file you modified.</p>
+<p>Next, type git commit -m"YOUR COMMIT MESSAGE HERE". Try to make a descriptive message so others know what you did.</p>
+<p>Finally, type git push. If it prompts you to do something with the --set-upstream option, just follow whatever it tells you to do instead.</p>
+<p>Now, when you go back to your fork page on GitHub, you should be able to see a new branch in the branches list!</p>
+<h3 id="making-the-pr">Making the PR</h3>
+<p>Go to <a href="https://github.com/ocf/ocfstatic/compare">github.com/ocf/ocfstatic/compare</a>, and change your head repository and head compare to point to your fork and the branch you just made. The page should then display instructions on how you can create a pull request. Follow the instructions, and optionally write a nice message describing what you just did!</p>
+<p>This PR should now appear in the <a href="https://github.com/ocf/ocfstatic/pulls">pull requests list</a>. A staff member with write access will review it to ensure the change was made correctly, and if it is, it will be merged into the original code and displayed on the website. Congrats on making a pull request!</p>
+<h2 id="task-3-staff-hours">Task 3: Staff Hours</h2>
+<p>Now for a less guided exercise.</p>
+<p>Try using the same process above to add yourself to the staff hours list <a href="https://github.com/ocf/etc/blob/master/configs/staff_hours.yaml">here</a>. You may want to pick a time where a veteran staffer is also holding staff hours, so you can hang out with them and learn more about how to run one yourself!</p>
+<p>As a summary of the process:</p>
+<ol>
+<li>Fork the repository to your account</li>
+<li>Clone the fork to supernova</li>
+<li>Create a new branch</li>
+<li>Make the change</li>
+<li>git add .,</li>
+</ol>
+<p><code>javascript
+   git commit -m"message"</code></p>
+<p>,</p>
+<p><code>javascript
+   git push</code>
+6. Make the PR on GitHub</p>
+<h1 id="what-next">What next?</h1>
+<p>Although you may now be comfortable using many core features of Git, you may also be wondering what exactly each of these steps do! Here are some more resources to learn more about git:</p>
+<ul>
+<li><a href="https://decal.ocf.berkeley.edu/labs/b9/">Decal Lab b9</a> and its corresponding <a href="https://www.youtube.com/watch?v=X4yGMr9c64U&amp;feature=youtu.be">lecture</a></li>
+<li><a href="https://git-scm.com/docs/user-manual">Git User Manual</a></li>
+<li><a href="https://www.atlassian.com/git">Atlassian Git Tutorial</a></li>
+</ul>
+<hr /></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js"></script>
+        <script src="../../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
