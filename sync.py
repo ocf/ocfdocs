@@ -84,7 +84,11 @@ class OutlineAPI:
         
         # Move all contents from temp to docs
         for item in os.listdir("./temp"):
-            shutil.move(os.path.join("./temp", item), "./docs")
+            try:
+                shutil.move(os.path.join("./temp", item), "./docs")
+            except:
+                shutil.rmtree(os.path.join("./docs", item))
+                shutil.move(os.path.join("./temp", item), "./docs")
 
         # Remove temp files and directory
         shutil.rmtree("./temp")
@@ -118,8 +122,16 @@ def main():
     api_token = os.getenv("API_KEY")
     outline_api = OutlineAPI(api_token)
 
+    # Reinitialize the docs folder
+    shutil.rmtree("./docs")
+    os.mkdir("docs")
+    for file in os.listdir("./base"):
+        shutil.copy(os.path.join("./base", file), "./docs")
+        
+    # Fetch from outline
     response = outline_api.get_collection_documents("njha-archives-things-Qu0hZTK2hn")
     outline_api.download_collection(response)
+
 
 if __name__ == "__main__":
     main()
