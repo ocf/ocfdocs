@@ -28,10 +28,9 @@ theme:
   features:
     - navigation.instant
     - navigation.instant.progress
-    - navigation.sections
-    - navigation.expand
     - navigation.indexes 
     - navigation.tabs
+    - navigation.path
   
   font:
     text: JetBrains Mono
