@@ -12,5 +12,7 @@ source ./venv/bin/activate
 
 pip install -r requirement.txt
 
+echo "Don't forget to manually add your API key in .env file!!"
+
 
 

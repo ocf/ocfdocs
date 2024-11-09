@@ -41,7 +41,12 @@ class OutlineAPI:
         response = requests.post(url, json=payload, headers=self.headers)
 
         # Check the file operation and await completion
-        operation_id = response.json().get("data").get("fileOperation").get('id')
+        try:
+            operation_id = response.json().get("data").get("fileOperation").get('id')
+
+        except AttributeError as e:
+            raise ValueError("Error fetch content. Your API key might be invalid "
+                            "or the collection might not exist.")
 
         operation_url = f"{self.base_url}/fileOperations.info"
         operation_payload = {
@@ -77,10 +82,11 @@ class OutlineAPI:
             zip_ref.extractall("./temp")
 
         # Rename files and directories to replace spaces with hyphens
-        for root, dirs, files in os.walk("./temp", topdown=False):
-            for name in files + dirs:
-                new_name = name.replace(" ", "-")
-                os.rename(os.path.join(root, name), os.path.join(root, new_name))
+        # for root, dirs, files in os.walk("./temp", topdown=False):
+        #     for name in files + dirs:
+        #         new_name = name.replace(" ", "-")
+        #         os.rename(os.path.join(root, name), os.path.join(root, new_name))
+        # Removed, since it results in incompatible internal links after Mkdocs build
         
         # Move all contents from temp to docs
         for item in os.listdir("./temp"):
@@ -125,12 +131,25 @@ def main():
     # Reinitialize the docs folder
     shutil.rmtree("./docs")
     os.mkdir("docs")
-    for file in os.listdir("./base"):
-        shutil.copy(os.path.join("./base", file), "./docs")
+    for item in os.listdir("./base"):
+        s = os.path.join("./base", item)
+        d = os.path.join("./docs", item)
+        if os.path.isdir(s):
+            shutil.copytree(s, d, dirs_exist_ok=True)
+        else:
+            shutil.copy(s, d)
         
     # Fetch from outline
-    response = outline_api.get_collection_documents("njha-archives-things-Qu0hZTK2hn")
+    # Should be improved
+    user_docs = "user-facing-docs-2akcai9GbX"
+    staff_docs = "staff-documentation-rMKefp3gWm"
+    # Should be improved
+    response = outline_api.get_collection_documents(staff_docs)
     outline_api.download_collection(response)
+    # Should be improved
+    response = outline_api.get_collection_documents(user_docs)
+    outline_api.download_collection(response)
+
 
 
 if __name__ == "__main__":
