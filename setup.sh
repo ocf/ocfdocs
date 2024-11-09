@@ -4,6 +4,8 @@
 touch .env
 echo "API_KEY=" > .env
 
+mkdir docs/
+
 
 # Activate python venv
 python3 -m venv venv
