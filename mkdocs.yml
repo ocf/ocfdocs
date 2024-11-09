@@ -2,3 +2,37 @@ site_name: OCF Documentation
 site_url: https://mydomain.org/mysite
 theme:
   name: material
+  palette:
+    # Palette toggle for light mode
+    - scheme: default
+      primary: green
+      accent: pink
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      primary: green
+      accent: pink
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  
+  logo: assets/penguin.svg
+  favicon: assets/penguin.svg
+
+  ## Navigation
+  # For detail information on these configuration options, 
+  # see: https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation
+  features:
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.sections
+    - navigation.expand
+    - navigation.indexes 
+    - navigation.tabs
+  
+  font:
+    text: JetBrains Mono
+    code: JetBrains Mono

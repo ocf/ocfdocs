@@ -131,8 +131,13 @@ def main():
     # Reinitialize the docs folder
     shutil.rmtree("./docs")
     os.mkdir("docs")
-    for file in os.listdir("./base"):
-        shutil.copy(os.path.join("./base", file), "./docs")
+    for item in os.listdir("./base"):
+        s = os.path.join("./base", item)
+        d = os.path.join("./docs", item)
+        if os.path.isdir(s):
+            shutil.copytree(s, d, dirs_exist_ok=True)
+        else:
+            shutil.copy(s, d)
         
     # Fetch from outline
     response = outline_api.get_collection_documents("mkdocs-test-5KZOA2wGWz")
