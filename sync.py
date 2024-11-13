@@ -151,6 +151,8 @@ def main():
     response = outline_api.get_collection_documents(user_docs)
     outline_api.download_collection(response)
 
+    time.sleep(60)
+
 
 
 if __name__ == "__main__":
