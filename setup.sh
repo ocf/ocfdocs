@@ -1,8 +1,10 @@
 #!/bin/bash
 # Create .env file for secrets
 # YOU NEED TO MANUALLY ADD YOUR API
-touch .env
-echo "API_KEY=" > .env
+if [ ! f .env ]; then
+    touch .env
+    echo "API_KEY=" > .env
+fi
 
 # Create docs folder
 mkdir docs

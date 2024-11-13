@@ -13,6 +13,7 @@ class OutlineAPI:
             "Content-Type": "application/json",
             "Authorization": f"Bearer {api_token}"
         }
+
     def list_file_operations(self): 
         url = "https://docs.ocf.berkeley.edu/api/fileOperations.list"
 
@@ -40,14 +41,14 @@ class OutlineAPI:
 
         response = requests.post(url, json=payload, headers=self.headers)
 
-        # Check the file operation and await completion
+
         try:
             operation_id = response.json().get("data").get("fileOperation").get('id')
 
         except AttributeError as e:
-            raise ValueError("Error fetch content. Your API key might be invalid "
-                            "or the collection might not exist.")
+            raise ValueError(f"Error fetch content [{response}]. Your API key might be invalid or the collection might not exist.")
 
+        # Check the file operation and await completion
         operation_url = f"{self.base_url}/fileOperations.info"
         operation_payload = {
             "id": operation_id
