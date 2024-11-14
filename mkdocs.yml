@@ -33,5 +33,6 @@ theme:
     - navigation.path
   
   font:
-    text: JetBrains Mono
     code: JetBrains Mono
+extra:
+  generator: false

@@ -144,14 +144,16 @@ def main():
     # Should be improved
     user_docs = "user-facing-docs-2akcai9GbX"
     staff_docs = "staff-documentation-rMKefp3gWm"
+
     # Should be improved
     response = outline_api.get_collection_documents(staff_docs)
     outline_api.download_collection(response)
+    
     # Should be improved
     response = outline_api.get_collection_documents(user_docs)
     outline_api.download_collection(response)
 
-    time.sleep(60)
+
 
 
 
