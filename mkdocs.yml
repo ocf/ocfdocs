@@ -1,5 +1,5 @@
 site_name: OCF Documentation
-site_url: https://mydomain.org/mysite
+site_url: https://docs.ocf.berkeley.edu
 theme:
   name: material
   palette:

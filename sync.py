@@ -5,6 +5,7 @@ import os
 from dotenv import load_dotenv
 import zipfile
 import shutil
+import json
 
 class OutlineAPI:
     def __init__(self, api_token):
@@ -141,21 +142,16 @@ def main():
             shutil.copy(s, d)
         
     # Fetch from outline
-    # Should be improved
-    user_docs = "user-facing-docs-2akcai9GbX"
-    staff_docs = "staff-documentation-rMKefp3gWm"
+    with open("config.json") as f:
+        collections = json.load(f)
+    ids = collections["collections"]
 
-    # Should be improved
-    response = outline_api.get_collection_documents(staff_docs)
-    outline_api.download_collection(response)
+    for collection in ids:
+        response = outline_api.get_collection_documents(collection)
+        outline_api.download_collection(response)
     
-    # Should be improved
-    response = outline_api.get_collection_documents(user_docs)
-    outline_api.download_collection(response)
-
-
-
-
+    print("Sync complete.")
+    
 
 if __name__ == "__main__":
     main()
