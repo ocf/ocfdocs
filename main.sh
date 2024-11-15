@@ -1,5 +1,8 @@
-#!/usr/bin/bash
+#!/bin/bash
+source /ocfdocs/venv/bin/activate
+
 while true; do
     python3 ./sync.py
-    sleep 60  # Every hour
+    mkdocs build
+    sleep 3600  # Every hour     
 done
