@@ -15,18 +15,6 @@ class OutlineAPI:
             "Authorization": f"Bearer {api_token}"
         }
 
-    def list_file_operations(self): 
-        url = "https://docs.ocf.berkeley.edu/api/fileOperations.list"
-
-        payload = {
-            "limit": 25,
-            "sort": "updatedAt",
-            "direction": "DESC",
-            "type": "export"
-        }
-
-        response = requests.get(url, json=payload, headers=self.headers)
-        return response.json()
 
     def get_collection_documents(self, collection_id):
         """
@@ -72,7 +60,7 @@ class OutlineAPI:
 
     def download_collection(self, collection_url):
         """
-        Download a collection from Outline and save it in docs folder
+        Download a collection from Outline and save it docs folder.
         """
         # Get zip file
         response = requests.get(collection_url)
@@ -82,13 +70,6 @@ class OutlineAPI:
         # Unzip
         with zipfile.ZipFile("temp.zip", "r") as zip_ref:
             zip_ref.extractall("./temp")
-
-        # Rename files and directories to replace spaces with hyphens
-        # for root, dirs, files in os.walk("./temp", topdown=False):
-        #     for name in files + dirs:
-        #         new_name = name.replace(" ", "-")
-        #         os.rename(os.path.join(root, name), os.path.join(root, new_name))
-        # Removed, since it results in incompatible internal links after Mkdocs build
         
         # Move all contents from temp to docs
         for item in os.listdir("./temp"):
@@ -98,31 +79,24 @@ class OutlineAPI:
                 shutil.rmtree(os.path.join("./docs", item))
                 shutil.move(os.path.join("./temp", item), "./docs")
 
+        # Outline API downloads the index page of each section outside the section folder
+        # As a result, Mkdocs would build the index page outside the section, which is not desired
+        # This code moves the index pages into the section folder
+        # However, this would break the internal links to the moved index pages...
+        # Is there is a better approach?
+        for root, dirs, files in os.walk("./docs"):
+            for file in files:
+                file_name = os.path.splitext(file)[0]
+                subdir_path = os.path.join(root, file_name)
+                if os.path.isdir(subdir_path):
+                    source_file = os.path.join(root, file)
+                    shutil.move(source_file, os.path.join(subdir_path, "index.md"))
+
         # Remove temp files and directory
         shutil.rmtree("./temp")
         os.remove("temp.zip")
 
 
-    def save_as_md(self, text, filename):
-        """
-        Save a block of text as a Markdown (.md) file.
-    
-        :param text: The text to save as markdown.
-        :param filename: The name of the file to save (without extension).
-        """
-        # Ensure the file ends with .md extension
-        if not filename.endswith(".md"):
-            filename += ".md"
-            filename.replace(" ", "-")
-    
-        try:
-            # Open file in write mode
-            with open(filename, "w") as file:
-                file.write(text)
-            print(f"File saved as {filename}")
-
-        except Exception as e:
-            print(f"An error occurred: {e}")
 
     
 def main():
