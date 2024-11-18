@@ -4,5 +4,5 @@ source /ocfdocs/venv/bin/activate
 while true; do
     python3 ./sync.py
     mkdocs build
-    sleep 3600  # Every hour     
+    sleep 1800  # Every 30 minutes     
 done
