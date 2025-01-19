@@ -81,22 +81,42 @@ class OutlineAPI:
 
         # Outline API downloads the index page of each section outside the section folder
         # As a result, Mkdocs would build the index page outside the section, which is not desired
-        # This code moves the index pages into the section folder
-        # However, this would break the internal links to the moved index pages...
-        # Is there is a better approach?
+        # This code moves the index pages into the section folder, 
+        # Then parses all content to fix broken internal links
+        # Spaghetti code warning
+        moved_files = []
         for root, dirs, files in os.walk("./docs"):
             for file in files:
                 file_name = os.path.splitext(file)[0]
                 subdir_path = os.path.join(root, file_name)
                 if os.path.isdir(subdir_path):
                     source_file = os.path.join(root, file)
+                    # Spaces are represented as %20 in internal linking
+                    moved_files.append(re.escape(re.sub(" ", "%20", file)))
+                    # When you move the index files, relative links also get broken within these files. So have to fix this too
+                    with open(source_file, "r+") as f:
+                        content = f.read()
+                        content = re.sub("]\(./", "](../", content)
+                        f.seek(0)
+                        f.write(content)
                     shutil.move(source_file, os.path.join(subdir_path, "index.md"))
+
+        # Fix internal links
+        for root, dirs, files in os.walk("./docs"):
+            for file in files:
+                if file[-3:] == ".md":
+                    with open(os.path.join(root, file), "r+") as f:
+                        content = f.read()
+                        for file_name in moved_files:
+                            # Unescape regex patterns
+                            replacement = (file_name[:-3] + "/index.md").replace("\\", "")
+                            content = re.sub(file_name, replacement, content)
+                        f.seek(0)
+                        f.write(content)
 
         # Remove temp files and directory
         shutil.rmtree("./temp")
         os.remove("temp.zip")
-
-
 
     
 def main():

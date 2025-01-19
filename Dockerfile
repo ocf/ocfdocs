@@ -34,7 +34,8 @@ RUN mkdir -p /var/log/sync
 RUN mkdir -p /var/log/nginx
 
 # Expose port
-EXPOSE 80
+EXPOSE 15000
 
 # Start syncing
+
 CMD ["/usr/bin/supervisord"]
