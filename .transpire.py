@@ -20,14 +20,16 @@ def objects():
         port_on_pod=15000,
         port_on_svc=80,
     )
-
-    ing = Ingress.from_svc(
+    
+    ing = Ingress(
         svc=svc,
         # TODO: Define domain name
         host="//.ocf.berkeley.edu",
         path_prefix="/",
     )
 
+    # TODO: Secrets
+    
     yield dep.build()
     yield svc.build()
     yield ing.build()
