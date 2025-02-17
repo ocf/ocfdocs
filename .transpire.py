@@ -36,5 +36,5 @@ def objects():
 
 
 def images():
-    yield Image(name="ocfdocs", path=Path("/"), registry="ghrc")
+    yield Image(name="ocfdocs", path=Path("/"), registry="ghcr")
     
