@@ -9,13 +9,13 @@ name = "ocfdocs"
 
 def objects():
     dep = Deployment(
-        name="ocfdocs",
+        name=name,
         image=get_image_tag("ocfdocs"),
         ports=[15000],
     )
 
     svc = Service(
-        name="ocfdocs",
+        name=name,
         selector=dep.get_selector(),
         port_on_pod=15000,
         port_on_svc=80,
@@ -29,10 +29,17 @@ def objects():
     )
 
     # TODO: Secrets
+    sec = Secret(
+        name=name,
+        string_data={
+            "OUTLINE_API_KEY": "",
+        },
+    )
     
     yield dep.build()
     yield svc.build()
     yield ing.build()
+    yield sec.build()
 
 
 def images():
