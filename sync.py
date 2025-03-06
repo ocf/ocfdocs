@@ -121,7 +121,7 @@ class OutlineAPI:
     
 def main():
     load_dotenv()
-    api_token = os.getenv("API_KEY")
+    api_token = os.getenv("OUTLINE_API_KEY")
     outline_api = OutlineAPI(api_token)
 
     # Reinitialize the docs folder
