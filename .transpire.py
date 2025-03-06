@@ -24,7 +24,7 @@ def objects():
     ing = Ingress.from_svc(
         svc=svc,
         # TODO: Define domain name
-        host="//mkdocs.ocf.berkeley.edu",
+        host="mkdocs.ocf.berkeley.edu",
         path_prefix="/",
     )
 
