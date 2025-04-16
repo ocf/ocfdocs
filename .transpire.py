@@ -8,12 +8,6 @@ name = "ocfdocs"
 
 
 def objects():
-    ing = Ingress.from_svc(
-        svc=svc,
-        # TODO: Define domain name
-        host="mkdocs.ocf.berkeley.edu",
-        path_prefix="/",
-    )
 
     sec = Secret(
         name=name,
@@ -27,7 +21,7 @@ def objects():
         image=get_image_tag("ocfdocs"),
         ports=[15000],
     )
-    # Export secrets to environemtn
+    # Export secrets to environment
     dep.pod_spec().with_configmap_env(name).with_secret_env(name)
 
     svc = Service(
@@ -35,6 +29,12 @@ def objects():
         selector=dep.get_selector(),
         port_on_pod=15000,
         port_on_svc=80,
+    )
+
+    ing = Ingress.from_svc(
+        svc=svc,
+        host="mkdocs.ocf.berkeley.edu",
+        path_prefix="/",
     )
     
     yield dep.build()
