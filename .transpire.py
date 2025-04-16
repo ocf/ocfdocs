@@ -8,7 +8,7 @@ name = "ocfdocs"
 
 
 def objects():
-
+    # Secrets, added through vault
     sec = Secret(
         name=name,
         string_data={
@@ -16,6 +16,7 @@ def objects():
         },
     )
     
+    # Deployment
     dep = Deployment(
         name=name,
         image=get_image_tag("ocfdocs"),
@@ -23,7 +24,8 @@ def objects():
     )
     # Export secrets to environment
     dep.pod_spec().with_configmap_env(name).with_secret_env(name)
-
+    
+    # Service
     svc = Service(
         name=name,
         selector=dep.get_selector(),
@@ -31,10 +33,11 @@ def objects():
         port_on_svc=80,
     )
 
-    ing = Ingress.from_svc(
-        svc=svc,
+    # Ingress
+    ing = Ingress(
+        service_name=name,
         host="mkdocs.ocf.berkeley.edu",
-        path_prefix="/",
+        service_port=80,
     )
     
     yield dep.build()
