@@ -15,7 +15,6 @@ def objects():
         path_prefix="/",
     )
 
-    # TODO: Secrets
     sec = Secret(
         name=name,
         string_data={
@@ -28,7 +27,8 @@ def objects():
         image=get_image_tag("ocfdocs"),
         ports=[15000],
     )
-    deplop.pod_spec().with_configmap_env(name).with_secret_env(name)
+    # Export secrets to environemtn
+    dep.pod_spec().with_configmap_env(name).with_secret_env(name)
 
     svc = Service(
         name=name,
