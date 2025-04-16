@@ -8,19 +8,6 @@ name = "ocfdocs"
 
 
 def objects():
-    dep = Deployment(
-        name=name,
-        image=get_image_tag("ocfdocs"),
-        ports=[15000],
-    )
-
-    svc = Service(
-        name=name,
-        selector=dep.get_selector(),
-        port_on_pod=15000,
-        port_on_svc=80,
-    )
-    
     ing = Ingress.from_svc(
         svc=svc,
         # TODO: Define domain name
@@ -34,6 +21,20 @@ def objects():
         string_data={
             "OUTLINE_API_KEY": "",
         },
+    )
+    
+    dep = Deployment(
+        name=name,
+        image=get_image_tag("ocfdocs"),
+        ports=[15000],
+    )
+    deplop.pod_spec().with_configmap_env(name).with_secret_env(name)
+
+    svc = Service(
+        name=name,
+        selector=dep.get_selector(),
+        port_on_pod=15000,
+        port_on_svc=80,
     )
     
     yield dep.build()
