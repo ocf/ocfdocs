@@ -23,7 +23,7 @@ def objects():
         ports=[15000],
     )
     # Export secrets to environment
-    dep.pod_spec().with_configmap_env(name).with_secret_env(name)
+    dep.pod_spec().with_secret_env(name)
     
     # Service
     svc = Service(
